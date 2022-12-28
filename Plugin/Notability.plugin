@@ -8,4 +8,4 @@
 hostname = notability.com
 
 [Script]
-http-response Notability = type=http-response,pattern=^https:\/\/notability\.com\/subscriptions$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/scripts/langkhach/Notability.js^https://notability.com/subscriptions requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/notability.js
+http-response ^https:\/\/notability\.com\/subscriptions$ requires-body=true,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/scripts/langkhach/Notability.js
