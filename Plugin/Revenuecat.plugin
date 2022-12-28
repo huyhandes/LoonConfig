@@ -8,8 +8,8 @@ hostname = %APPEND% api.revenuecat.com, firebaseremoteconfig.googleapis.com
 https:\/\/api\.revenuecat\.com header-del x-revenuecat-etag
 
 ^https:\/\/firebaseremoteconfig\.googleapis\.com header-del if-none-match
-[Map Local]
-//^https:\/\/firebaseremoteconfig\.googleapis\.com\/v\d\/projects data="https://github.com/huyhandes/LoonConfig/raw/master/mocks/firebase.json"
+^https:\/\/firebaseremoteconfig\.googleapis\.com\/v\d\/projects 302 https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/mocks/firebase.json
+
 
 [Script]
 http-response ^https:\/\/firebaseremoteconfig\.googleapis\.com\/v\d\/projects requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/new/scripts/langkhach/Fileball.js
